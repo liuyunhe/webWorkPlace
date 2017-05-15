@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>动态详情</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <style type="text/css">
+        .photo_icon {height: 15px;width: 12px;margin-top: 18px;margin-right: 10px;float: left;}
+        .border_bottom {border-bottom: 1px solid #e5e5e5;}
+        .location_pic {background: url(./images/location_icon@3x.png) no-repeat;}
+        .telephone_pic {background: url(./images/telephone_icon@3x.png) no-repeat;}
+        .titlecolor {color: #999999;}
+        .content_title {padding: 0 10px;font-size: 20px;line-height: 50px;}
+        .content_title_sm {font-size: 15px;}
+        .borderfix {border-bottom: 10px solid #EEEEEE;padding-bottom: 0}
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="content">
+            <div class="content_title border_bottom">
+                <div>内容内容内容内容内容</div>
+            </div>
+            <div class="content_title content_title_sm border_bottom">
+                <div class="photo_icon location_pic"></div>
+                <div>广州市琶洲新村A区商铺B1211档</div>
+            </div>
+            <div class="content_title content_title_sm">
+                <div class="photo_icon telephone_pic"></div>
+                <div>1383838438</div>
+            </div>
+        </div>
+        <div class="zan-row clearfix">
+            <div class="txs clearfix">
+                <img src="images/people.jpg">
+                <img src="images/people.jpg">
+            </div>
+            <div class="arrow-r"></div>
+            <a class="zan-txt" style="padding-right: 3%;float: right;" onclick="javascript:document.getElementById('switcher-large').scrollIntoView(true)">
+                八位邻居好评
+            </a>
+        </div>
+    </div>
+     <div class="reply borderfix">
+        <div class="reply-header titlecolor">创建者     <a id="haopingbt" style="float:right ">隐藏好评</a></div>
+        <div class="reply-body">
+            <div class="reply-item clearfix">
+                <div class="reply-left">
+                    <img src="./images/people.jpg" alt="" width="50px" height="50px">
+                </div>
+                <div class="reply-right">
+                    <div class="reply-info clearfix">
+                        <div class="reply-info-name">
+                            <div class="reply-info-name-top clearfix">
+                                <div>Terry200</div>
+                                <div class="gender female"></div>
+                            </div>
+                            <div class="reply-info-name-bottom">
+                                <span>同小区</span>,<span>同乡</span>,<span>一个共同好友</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reply-con">
+                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reply">
+        <div class="reply-header titlecolor">邻居评论(99)<a id="switcher-large">字体变大</a><a id="switcher-default">字体返回默认大小</a><a id="switcher-small">字体变小</a></div>
+        <div class="reply-body">
+            <div class="reply-item clearfix border_bottom">
+                <div class="reply-left">
+                    <img src="./images/people.jpg" alt="" width="50px" height="50px">
+                </div>
+                <div class="reply-right">
+                    <div class="reply-info clearfix">
+                        <div class="reply-info-name">
+                            <div class="reply-info-name-top clearfix">
+                                <div>王艳艳</div>
+                                <div class="gender female"></div>
+                                 <div class="heart clearfix">
+                                    <span></span>122
+                                </div>
+                            </div>
+                            <div class="reply-info-name-bottom">
+                               <span>同小区</span>,<span>同乡</span>,<span>一个共同好友</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reply-con">
+                        回复<span>Terry200</span>：内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+                    </div>
+                </div>
+            </div>
+            <div class="reply-item clearfix border_bottom">
+                <div class="reply-left">
+                    <img src="./images/people.jpg" alt="" width="50px" height="50px">
+                </div>
+                <div class="reply-right">
+                    <div class="reply-info clearfix">
+                        <div class="reply-info-name">
+                            <div class="reply-info-name-top clearfix">
+                                <div>Terry200</div>
+                                <div class="gender female"></div>
+                            </div>
+                            <div class="reply-info-name-bottom">
+                                <span>同小区</span>,<span>同乡</span>,<span>一个共同好友</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reply-con">
+                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="123" class="bottom clearfix">
+        <div class="bottom-logo"></div>
+        <div class="bottom-text">幸福不过，回家了</div>
+        <div class="bottom-down">立即下载</div>
+    </div>
+</body>
+<script type="text/javascript" src="./jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    //点赞
+    $('.zan').on('click',function(){
+        var _this = $(this);
+        var zanNum = $('.zan_num').html()-0;
+        _this.toggleClass('current');
+        if(_this.hasClass('current')){
+            zanNum += 1;
+            $('.zan_num').html(zanNum);
+        }else{
+            zanNum -= 1;
+            $('.zan_num').html(zanNum);
+        }
+    })
+
+    $(function () {
+        var $slidebox  = $('body > div.layout > div.zan-row.clearfix');
+        var $haopingbt = $('#haopingbt');
+        $haopingbt.click(function () {
+            event.preventDefault();
+            $slidebox.slideToggle();
+            if($(this).text() == '隐藏好评') {
+                $(this).text('显示好评');
+            } else {
+                $(this).text('隐藏好评');
+            }
+        });
+    });
+    $(function () {
+        var $content = $('.reply-con');
+        var defaultSize = $content.css('fontSize');
+        $('div.reply-header.titlecolor>a').click(function () {
+            var num = parseFloat($content.css('fontSize'));
+            switch ($(this).attr('id')) {
+                case 'switcher-large':
+                    num *= 1.4 ;
+                    break;
+                case 'switcher-small':
+                    num /= 1.4 ;
+                    break;
+                default :
+                    num = parseFloat(defaultSize);
+            }
+            $content.animate({fontSize:num + 'px'},'slow');
+        });
+    })
+</script>
+</html>
