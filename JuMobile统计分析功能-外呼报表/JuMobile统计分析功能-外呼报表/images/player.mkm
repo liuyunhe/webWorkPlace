@@ -1,0 +1,9 @@
+<MKM version="2.0" imageFileUrl="file:///C:/Users/Lin/Desktop/juMobile/images/player.png">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="1" x="78" y="3"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="4408131" offsetX="25" offsetY="10" x="380" y="52"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="723723" offsetX="25" offsetY="10" x="330" y="27"/>
+    <LengthMark direction="3" color="16711680" length="55" x="69" y="3"/>
+    <LengthMark direction="12" color="16711680" length="1" x="3" y="12"/>
+  </Marks>
+</MKM>
