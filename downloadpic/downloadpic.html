@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function download(src) {
+            var $a = document.createElement('a');
+            $a.setAttribute("href", src);
+            $a.setAttribute("download", "");
+
+            var evObj = document.createEvent('MouseEvents');
+            evObj.initMouseEvent( 'click', true, true, window, 0, 0, 0, 0, 0, false, false, true, false, 0, null);
+            $a.dispatchEvent(evObj);
+        };
+    </script>
+</head>
+<body>
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493029980868&di=b7414cd1967f8a303d30fedc2e7061eb&imgtype=0&src=http%3A%2F%2Ffdfs.xmcdn.com%2Fgroup13%2FM0B%2F70%2FDE%2FwKgDXVc9iyTBVkVCAACsnkjRnAA346.jpg" style="width: 50%;" onclick="download(this.src)">
+    <p>点击图片下载</p>
+</body>
+</html>

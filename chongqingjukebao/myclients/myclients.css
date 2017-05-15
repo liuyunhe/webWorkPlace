@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: #f6f2ef;
+    font-size: 0.17rem;
+}
+.searchbar {
+	margin: 0 auto;
+    width: 90%;
+    margin-top: 0.06rem;
+    margin-bottom: 0.2rem;
+    position: relative;
+}
+.searchresult {
+	margin: 0 auto;
+	font-size: 0.16rem;
+    width: 90%;
+    margin-top: 0.06rem;
+    padding: 0.05rem 0;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    box-shadow: 0.01rem 0.01rem 0.2rem #d9d9d8;
+    border-bottom: 1px solid #aaaaaa;
+}
+.inline {
+	display: inline-block;
+}
+.resulticon {
+	width: 0.2rem;
+	vertical-align: middle;
+    margin-top: -0.03rem;
+    margin-left: 0.1rem;
+}
+.clientsmessage {
+	margin: 0 auto;
+    width: 90%;
+    line-height: 0.35rem;
+    position: relative;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 0.16rem;
+}
+.telephoneicon {
+	width: 0.22rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.11rem;
+}
+.date {
+	font-size: 0.12rem;
+	color: #999999;
+}
+.blank {
+	padding-left: 0.05rem;
+}
+.bar {
+    width: 85%;
+    border: 1px solid transparent;
+    border-radius: 0.04rem;
+    color: #cccccc;
+    line-height: 0.25rem;
+    font-size: 0.12rem;
+    outline: none;
+}
+.plusicon {
+	width: 0.22rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.11rem;
+}
+.searchicon {
+    width: 0.16rem;
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    margin-top: -0.08rem;
+}

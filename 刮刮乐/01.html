@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>无标题文档</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <style>
+    .content,.cover{width:400px; height:400px; position:absolute; left:50%; top:50%; margin:-200px 0 0 -200px;}
+    .content{ font-size:48px; line-height:400px; text-align:center;}
+    h3{ text-align:center; line-height:200px;}
+    </style>
+
+</head>
+
+<body>
+    <h3>快来刮开！！！</h3>
+    <div class="content" ><span>中奖啦~</span></div>
+    <canvas id="cover" class="cover" width="400" height="400"></canvas>
+</body>
+<script type="text/javascript" src="./jquery-1.11.1.min.js"></script>
+<script>
+var isdown = false,
+    
+    cover = document.getElementById("cover"),
+    
+    //Canvas.getContext(contextID);参数 contextID 指定了您想要在画布上绘制的类型。当前唯一的合法值是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API。 
+    covercanvas = cover.getContext("2d");       
+    
+    //canvas撑不满的地方颜色为透明；
+    covercanvas.fillStyle="transparent";        //
+    
+    //context.fillRect(x,y,width,height);
+    covercanvas.fillRect(0,0,400,400);
+    
+    function fillter( canvas ){
+        canvas.fillStyle="#ccc";
+        canvas.fillRect(0,0,400,400);
+    }
+    function isDown(e){
+        e.preventDefault();
+        isdown=true;    
+    }
+    function isUp(e){
+        isdown=false;   
+    }
+    function draw( e ){
+        e.preventDefault();
+        if(isdown){
+            if(e.changedTouches){
+                e=e.changedTouches[e.changedTouches.length-1];
+            }
+
+            var _height= parseInt((window.innerHeight-400)/2),
+                _width= parseInt((window.innerWidth-400)/2),
+                touchTop=e.clientY - _height,
+                touchLeft=e.clientX - _width;
+            
+            with(covercanvas){
+                beginPath();
+                arc(touchLeft, touchTop, 20, 0, Math.PI * 2);
+                fill();
+            }   
+        }
+        //alert(touchTop);
+    }
+    fillter(covercanvas);
+    covercanvas.globalCompositeOperation = 'destination-out';
+    cover.addEventListener('touchstart',isDown);
+    cover.addEventListener('touchmove',draw);
+    cover.addEventListener('touchend',isUp);
+    cover.addEventListener('mousemove',draw);
+    cover.addEventListener('mousedown',isDown);
+    cover.addEventListener('mouseup',isUp);
+    
+</script>
+</html>

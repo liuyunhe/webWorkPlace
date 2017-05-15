@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    background-color: #f6f2ef;
+    font-size: 0.17rem;
+}
+.locationcity {
+	margin: 0 auto;
+    width: 90%;
+    background-color: #f6f2ef;
+    margin-top: 0.06rem;
+    text-align: center;
+    padding: 0.05rem 0;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    box-shadow: 0.01rem 0.01rem 0.2rem #d9d9d8;
+    border-bottom: 1px solid #aaaaaa;
+}
+.capturecenter {
+	/*display: inline-block;*/
+}
+.locatonicon {
+	width: 0.15rem;
+	vertical-align: middle;
+}
+.items {
+	margin: 0 auto;
+    width: 90%;
+    line-height: 0.35rem;
+    position: relative;
+    border-bottom: 1px solid #aaaaaa;
+}
+.borderline {
+	border-bottom: 1px solid #aaaaaa;
+}
+table {
+	width: 100%;
+}
+.itemname {
+	font-size: 0.15rem;
+}
+.averageprice {
+	font-size: 0.1rem;
+	color: #999999;
+    line-height: 0.15rem;
+}
+.commission {
+	font-size: 0.1rem;
+	line-height: 0.15rem;
+	color: #fd6900;
+	padding-bottom: 0.05rem;
+}
+.imgdisplay {
+	line-height: 0.15rem;
+}
+.telephoneicon {
+	width: 0.22rem;
+	position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.11rem;
+}

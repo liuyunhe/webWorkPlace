@@ -1,0 +1,66 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    /*针对移动设备*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-size: 100% 100% !important;
+}
+
+html,
+body {
+    font-family: "microsoft YaHei", "sans-serif";
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    /*display: block;*/
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: "";
+}
+
+/*文本超出显示省略号*/
+.text-over {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

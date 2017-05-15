@@ -1,0 +1,337 @@
+body{
+    background-color: #FFF;
+}
+
+.layout {
+    color: #333333;
+}
+
+.content{
+    padding:10px 10px;
+    border-bottom: 10px solid #EEEEEE;
+}
+
+.header .tx{
+    width:50px;
+    height:50px;
+    float: left;
+    position: relative;
+}
+
+.header .tx>img{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+
+.header .tx .v-angle{
+    position: absolute;
+    width:20px;
+    height:20px;
+    right:-2px;
+    bottom: -2px;
+}
+
+.header .info{
+    float: left;
+    padding-left:5px;
+}
+
+.header .info-top>div{
+    float: left;
+}
+
+.header .gender{
+    height:15px;
+    width:15px;
+    margin-top:4px;
+}
+
+.header .gender.female{
+    background: url("../images/female.png") no-repeat;
+}
+
+.header .gender.male{
+    background: url("../images/male.png") no-repeat;
+}
+
+.header .heart{
+    background-color: #FFF0F0;
+    padding:5px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    font-size: 12px;
+    margin-left:5px;
+}
+
+.header .heart span{
+    background: url("../images/heart.png") no-repeat;
+    width:13px;
+    height:13px;
+    float: left;
+    margin-top:2px;
+    margin-right: 2px;
+}
+
+.header .info-bottom{
+    font-size: 14px;
+    color: #999999;
+}
+
+.content-body{
+    margin-top:10px;
+}
+
+.content-body .bt{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.content-body .nr{
+    margin-bottom:5px;
+}
+
+.content-body .img-box{
+    margin-bottom: 10px;
+}
+
+.content-body .img-box img{
+    float: left;
+    border: 1px solid #000;
+    width: 32.6666%;
+    margin-right: 1%;
+}
+
+.content-body .img-box img:last-child{
+    margin-right: 0;
+}
+
+.content-body .time{
+    font-size: 14px;
+    color: #999999;
+}
+
+.content-body .time>div:first-child{
+    float: left;
+}
+
+.content-body .time>div:nth-child(2){
+    float: right;
+}
+
+.content-body .time>div:last-child{
+    margin-right: 20px;
+    float: right;
+}
+
+.content-body .time .zan{
+    width:17px;
+    height:16px;
+    display: inline-block;
+    background: url(../images/zan.png) no-repeat;
+    margin-right:5px;
+}
+
+.content-body .time .zan.current{
+    background: url(../images/zan-current.png) no-repeat;
+}
+
+.content-body .time .zan_num{
+    vertical-align: top;
+}
+
+.content-body .time .rep{
+    width:17px;
+    height:14px;
+    display: inline-block;
+    background: url(../images/reply.png) no-repeat;
+    margin-right:5px;
+    vertical-align: middle;
+}
+
+.zan-row{
+    height: 70px;
+    padding: 10px;
+    border-bottom: 10px solid #EEEEEE;
+}
+
+.zan-row .txs{
+    float: left;
+}
+
+.zan-row .txs img{
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    float: left;
+    margin-right: 5px;
+}
+
+.zan-row .zan-txt{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+
+.zan-row .arrow-r{
+    float: right;
+    width: 8px;
+    height: 12px;
+    margin-top: 14px;
+    background: url(../images/arrow-r.png) no-repeat;
+}
+
+.reply{
+    padding-bottom:70px;
+}
+
+.reply .reply-header{
+    height:45px;
+    line-height:45px;
+    border-bottom: 1px solid #EEEEEE;
+    padding:0 10px;
+}
+
+.reply .reply-item{
+    padding-top:10px;
+}
+
+.reply .reply-left{
+    width:70px;
+    float: left;
+}
+
+.reply .reply-right{
+    width:calc(100% - 70px);
+    float: left;
+}
+
+.reply .reply-left img{
+    display: block;
+    margin: 0 auto;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+
+.reply .reply-info{
+    padding-right:10px;
+}
+
+.reply .reply-info-name{
+    float: left;
+}
+
+.reply .reply-info-name-top{
+    margin-bottom:5px;
+}
+
+.reply .reply-info-name-top>div{
+    float: left;
+}
+
+.reply .reply-info-name-top .gender{
+    height: 15px;
+    width: 15px;
+    margin-top: 2px;
+}
+
+.reply .reply-info-name-top .heart{
+    background-color: #FFF0F0;
+    padding: 3px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.reply .reply-info-name-top span{
+    background: url(../images/heart.png) no-repeat;
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-top: 3.5px;
+    margin-right: 2px;
+}
+
+.reply .reply-info-name-top .gender.female{
+    background: url(../images/female.png) no-repeat;
+}
+
+.reply .reply-info-name-top .gender.male{
+    background: url(../images/male.png) no-repeat;
+}
+
+.reply .reply-info-name-top .lz{
+    font-size: 12px;
+    color:#FFF;
+    background-color: #FF6969;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    padding:2px;
+    margin-left:5px;
+}
+
+.reply .reply-info-name-bottom{
+    font-size: 14px;
+    color: #999999;
+}
+
+.reply .reply-con{
+    padding-top:10px;
+    padding-right:15px;
+    padding-bottom:10px;
+    /*border-bottom: 1px solid #EEEEEE;*/
+}
+
+.reply .reply-con span{
+    color:#586C94;
+    padding-left:5px;;
+}
+
+.bottom{
+    position: fixed;
+    width:100%;
+    height:71px;
+    bottom: -1px;
+    border-top: 1px solid #EEEEEE;
+    -webkit-box-shadow: 0px -1px 5px #EEEEEE;
+    -moz-box-shadow: 0px -1px 5px #EEEEEE;
+    box-shadow: 0px -1px 5px #EEEEEE;
+    background-color: #fff;
+}
+
+.bottom .bottom-logo{
+    float: left;
+    margin: 10px 6px;
+    width:50px;
+    height:50px;
+    background: url("../images/logo.png") no-repeat;
+}
+
+.bottom .bottom-text{
+    float: left;
+    line-height:70px;
+}
+
+.bottom .bottom-down{
+    font-size: 13px;
+    float: right;
+    height:30px;
+    line-height:30px;
+    padding:0 5px;
+    color: #FFF;
+    background-color:#FF6969;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    margin: 20px 10px;
+    -webkit-box-shadow: 1px 1px 1px #D36060;
+    -moz-box-shadow: 1px 1px 1px #D36060;
+    box-shadow: 1px 1px 1px #D36060;
+}

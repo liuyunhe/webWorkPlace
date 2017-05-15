@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    
+</head>
+<body>
+<div class="DmpFine-box clearfix">
+    <div class="DmpFine-box-title">
+        <div class="DmpFine-box-titleLeft">
+            <div class="DmpFine-box-titleLeftText">生成二维码</div>
+        </div>
+        <div class="DmpFine-box-titleRight"><span class="delbtn">x</span></div>
+    </div>
+    <div class="DmpFine-box-body clearfix">
+        <!--发布问卷盒子-->
+        <div class="fbwj-box">
+            <div class="fbwj-box-til">生成二维码</div>
+            <div class="fbwj-box-body">
+                <div class="fbwj-box-low">
+                    <span class="fl mr20">二维码内容</span>
+                    <input type="text" class="DmpFine-textInput02 mr20" style="width:400px" value="http://baidu.com" id="codetext"/>
+                    <button class="DmpFine-btn01" onclick="createContact();">生成二维码</button>
+                </div>
+                <div class="fbwj-box-body-con mt20 mb20 clearfix">
+                    <div class="fbwj-imgbox" id="code">
+
+                    </div>
+                    <div class="fbwj-imgbox hidden" id="code1">
+
+                    </div>
+                    <div class="fbwj-btnbox">
+                        <button class="DmpFine-btn100">150 x 150</button>
+                        <button class="DmpFine-btn100">256 x 256</button>
+                        <button class="DmpFine-btn100">512 x 512</button>
+                        <button class="DmpFine-btn100">1024 x 1024</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="DmpFine-box-footer bort">
+        <button class="DmpFine-btn01">下载二维码</button>
+    </div>
+</div>
+</body>
+<script src="jquery-2.2.4.min.js"></script>
+<script src="jquery.qrcode.min.js"></script>
+<!--<script src="html2canvas.js"></script>-->
+<script>
+    $(function(){
+        $('.DmpFine-btn100').click(function(){
+            $(this).addClass('selected').siblings('.DmpFine-btn100').removeClass('selected');
+        })
+    })
+
+    function createContact(){
+        setCode($('#code'),$('#codetext').val(),220,220);
+	    $('.DmpFine-btn100').removeClass('selected');
+        $('#code1').html('');
+    }
+    setCode($('#code'),'http://baidu.com',220,220);
+    function setCode(obj,text,x,y){ //传4个参数，第一个生成二维码div，第二个地址,宽，高
+        obj.html('');
+        var str = toUtf8(text);
+        $(obj).qrcode({
+            width: x,
+            height:y,
+            text: str
+        });
+    }
+    /*$('body').append(getCode($('canvas')[0]));*/
+    function getCode(canvas) { /*传canvas获取图片*/
+        var image = new Image();
+        image.src = canvas.toDataURL("image/png");
+        return image;
+    }
+
+    function exportCanvasAsPNG(canvas, fileName) {
+        var isIE = !!window.ActiveXObject;
+        var MIME_TYPE = "image/png";
+        var dlLink = document.createElement('a');
+        dlLink.download = fileName;
+        dlLink.href = canvas.toDataURL("image/png");
+        if (isIE) {
+            var blob = new Blob( [dlLink.href] );
+            window.navigator.msSaveBlob(blob, fileName);
+            return false;
+        }
+
+            dlLink.dataset.downloadurl = [MIME_TYPE, dlLink.href].join(':');
+            document.body.appendChild(dlLink);
+            dlLink.click();
+            document.body.removeChild(dlLink);
+
+    }
+
+
+    function toUtf8(str) {
+        var out, i, len, c;
+        out = "";
+        len = str.length;
+        for(i = 0; i < len; i++) {
+            c = str.charCodeAt(i);
+            if ((c >= 0x0001) && (c <= 0x007F)) {
+                out += str.charAt(i);
+            } else if (c > 0x07FF) {
+                out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));
+                out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+            } else {
+                out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));
+                out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+            }
+        }
+        return out;
+    }
+    var arr = [150,256,512,1024]
+    $('.fbwj-btnbox .DmpFine-btn100').click(function(){
+        var num = $(this).index();
+        setCode($('#code1'),$('#codetext').val(),arr[num],arr[num]);
+    })
+    $('.bort .DmpFine-btn01').click(function(){
+        if(!$('#code1').children().length>0){
+            alert('请选择生成大小');
+        }else{
+            exportCanvasAsPNG($("#code1").find("canvas")[0], "code.png");
+            alert('生成成功');
+        }
+    })
+</script>
+</html>

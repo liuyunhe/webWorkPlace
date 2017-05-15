@@ -1,0 +1,63 @@
+body {
+	width: 100%;
+    margin: 0;
+    background-color: #f6f2ef;
+}
+.promptbox {
+	width: 90%;
+	margin: 0 auto;
+	background-color: #fff1b0;
+	border: 1px solid transparent;
+	border-radius: 0.04rem;
+	margin-top: 0.06rem;
+	margin-bottom: 0.2rem;
+	box-shadow: -0.01rem -0.01rem 0.2rem #d9d9d8;
+}
+.tips {
+	margin: 0;
+	font-size: 0.12rem;
+	color: #fe7c00;
+	padding: 0.05rem 0.11rem;
+}
+.bindbox {
+	margin: 0 auto;
+	width: 90%;
+	background-color: #f6f2ef;
+	border: 1px solid transparent;
+	border-radius: 0.04rem;
+	box-shadow: 0.01rem 0.01rem 0.2rem #d9d9d8;
+	font-size: 0.15rem;
+	padding: 0.05rem 0;
+	text-align: center;
+}
+.packs {
+	width: 85%;
+	height: 0.4rem;
+	border: 1px solid transparent;
+	border-radius: 0.04rem;
+	margin: 0.1rem;
+	box-shadow: -0.01rem -0.01rem 0.2rem #d9d9d8;
+	padding-left: 5%;
+	outline: none;
+}
+.button {
+	font-size: 0.17rem;
+	text-align: center;
+	margin-top: 0.35rem;
+}
+button {
+	width: 90%;
+	height: 0.35rem;
+	background-color: #fe7100;
+	font-size: 0.17rem;
+	border: transparent;
+	color: #fffefe;
+	border-radius: 1rem;
+}
+input {
+	font-size: 0.15rem;
+
+}
+.valuecolor {
+	color: #cccccc;
+}

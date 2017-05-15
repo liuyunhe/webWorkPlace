@@ -1,0 +1,34 @@
+body{
+    font-family:"Helvetica","Arial",serif;
+    color:#333;
+    background-color:#ccc;
+    margin: 1em 10%;
+}
+h1{
+    color:#333;
+    background-color:transparent;
+}
+
+a:link{color:blue}
+a:visited{color:black}
+a:hover{color:red}
+a:active{color:green}
+/*css伪类的运用*/
+/*link表示默认，visited表示访问过后，hover表示经过时，active表示点击时*/
+a{
+    background-color:transparent;
+    font-weight:bold;
+    text-decoration:none;
+}
+ul{
+    padding:0;
+}
+li{
+    float:left;
+    padding:1em;
+    list-style:none;
+}
+img{
+    display:block;
+    clear:both
+}
